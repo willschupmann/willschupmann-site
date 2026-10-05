@@ -1,119 +1,97 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Research · Will Schupmann</title>
-<meta name="description" content="Will Schupmann is a PhD candidate in Sociology at UCLA studying healthcare, inequality, and bioethics.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&display=swap">
-<style>
-/* Layout: top bar (name left, page links right); a hero pairing a large portrait with the opening statement; then plain sections in one reading column. */
-:root {
-  --bg: #fbfbfa;
-  --fg: #1e2328;
-  --muted: #5d6670;
-  --rule: #e4e7ea;
-  --accent: #2c5a7a;
-  --display: "Newsreader", "Iowan Old Style", Georgia, serif;
-  --body: "Public Sans", -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) { --bg: #15181b; --fg: #e4e7ea; --muted: #9aa3ad; --rule: #2b3036; --accent: #8db8d6; color-scheme: dark; }
-}
-:root[data-theme="dark"] { --bg: #15181b; --fg: #e4e7ea; --muted: #9aa3ad; --rule: #2b3036; --accent: #8db8d6; color-scheme: dark; }
-
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 1.0625rem; line-height: 1.75; -webkit-font-smoothing: antialiased; }
-a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.2em; }
-a:hover { text-decoration-thickness: 2px; }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
-p { margin: 0; }
-
-.page { max-width: 62rem; margin: 0 auto; padding-inline: 2rem; padding-block: 2.25rem 4rem; }
-
-/* Top bar */
-.top { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.75rem 2rem; }
-.name { font-family: var(--display); font-weight: 500; font-size: 2.1rem; line-height: 1.1; margin: 0; }
-.name a { color: var(--fg); text-decoration: none; }
-.nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.75rem; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; }
-.nav a { color: var(--muted); text-decoration: none; }
-.nav a:hover { color: var(--fg); }
-
-/* Hero */
-.hero { display: grid; grid-template-columns: minmax(0, 19rem) minmax(0, 1fr); gap: 3rem; align-items: start; margin-top: 4.5rem; scroll-margin-top: 2rem; }
-.photo { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 3px; display: block; background: var(--rule); }
-.hero-text { display: grid; gap: 1.25rem; min-width: 0; }
-.lede { font-family: var(--display); font-size: 1.6rem; line-height: 1.45; text-wrap: pretty; margin-bottom: 0.4rem; }
-.links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; font-size: 0.9375rem; padding-top: 0.25rem; }
-
-/* Sections */
-main { display: grid; gap: 4.5rem; margin-top: 6rem; max-width: 42rem; }
-section { display: grid; gap: 1.25rem; scroll-margin-top: 2rem; }
-h2 { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin: 0; }
-.projects { display: grid; gap: 2.75rem; margin: 0.75rem 0 0; padding: 0; list-style: none; }
-.projects h3 { font-family: var(--display); font-weight: 500; font-size: 1.35rem; line-height: 1.3; margin: 0 0 0.6rem; text-wrap: balance; }
-.cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 0.5rem; }
-.btn { display: inline-block; text-decoration: none; font-size: 0.9375rem; font-weight: 500; padding: 0.55rem 1rem; border: 1px solid var(--accent); border-radius: 4px; color: var(--accent); }
-.btn.primary { background: var(--accent); color: var(--bg); }
-.btn:hover { text-decoration: none; filter: brightness(1.08); }
-
-footer { margin-top: 5rem; font-size: 0.8125rem; color: var(--muted); padding-top: 1.5rem; border-top: 1px solid var(--rule); }
-
-@media (max-width: 760px) {
-  .page { padding-inline: 1.25rem; padding-block: 1.75rem 3rem; }
-  .top { flex-direction: column; align-items: start; }
-  .name { font-size: 1.85rem; }
-  .nav { gap: 0.4rem 1.25rem; }
-  .hero { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; margin-top: 2.5rem; }
-  .photo { max-width: 15rem; }
-  .lede { font-size: 1.3rem; }
-  main { margin-top: 4rem; gap: 3.5rem; }
-}
-
-.pubs { display: grid; gap: 1.25rem; }
-.page-title { font-family: var(--display); font-weight: 500; font-size: 2.2rem; line-height: 1.2; margin: 4.5rem 0 0; }
-.research main { margin-top: 1.5rem; max-width: none; }
-.nav a[aria-current="page"] { color: var(--fg); }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research · Will Schupmann</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="page research">
+<div class="page">
+
+  <!-- ===================== TOP BAR ===================== -->
   <header class="top">
     <p class="name"><a href="./">Will Schupmann</a></p>
-    <nav class="nav" aria-label="Pages">
+    <nav class="nav">
       <a href="./">About</a>
       <a href="research.html" aria-current="page">Research</a>
-      <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
+      <a href="cv.pdf" target="_blank">CV</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
+
+  <!-- ===================== RESEARCH ===================== -->
   <h1 class="page-title">Research</h1>
-  <main>
-    <section id="research">
-      <p>My research pursues three lines of inquiry. A full list of my publications is available on <a href="https://scholar.google.com/citations?user=e-PGYxwAAAAJ&amp;hl=en">Google Scholar</a>.</p>
-      <ul class="projects">
-        <li>
-          <h3>How organizations navigate competing values</h3>
-          <p>I have a long-standing interest in how organizations and individuals navigate competing goals and values, and the constraints that shape their efforts to do so. This line of research began during my time in the NIH Department of Bioethics, where I studied how competing ethical values should be balanced in genetic testing and pediatric research. My current work extends these questions to examine how value conflicts are socially produced and how organizational and regulatory arrangements shape efforts to reconcile them. Leveraging the high-stakes case of organ donation, I examine how organ procurement organizations (OPOs) and hospitals navigate tensions between facilitating donation and providing trustworthy and culturally resonant end-of-life care, and how recent regulatory reforms designed to increase the supply of organs for transplantation have heightened these tensions.</p>
-        </li>
-        <li>
-          <h3>Access and inequality</h3>
-          <p>A second line of my research examines how organizational and regulatory arrangements shape access to healthcare. I am particularly interested in how systems designed to promote equitable access can nonetheless produce unequal outcomes. My current work examines this problem in organ transplantation, including why OPOs increasingly allocate organs &ldquo;out of sequence,&rdquo; bypassing some potential recipients at the top of the allocation list.</p>
-        </li>
-        <li>
-          <h3>Expertise and clinical practice</h3>
-          <p>A third line of my research examines the social foundations of expertise. I have studied the barriers clinical ethicists face in establishing professional authority, how cardiologists incorporate new forms of genetic evidence into clinical decision-making, and how clinical practices spread among physicians through professional peer networks. All three studies appear in <em>Social Science &amp; Medicine</em>. My future research will examine how artificial intelligence is reshaping clinical judgment, hospital routines, and professional accountability.</p>
-        </li>
-      </ul>
-    </section>
-  </main>
+
+  <div class="content">
+
+    <p>
+      My research pursues three lines of inquiry. A full list of my
+      publications is available on
+      <a href="https://scholar.google.com/citations?user=e-PGYxwAAAAJ&hl=en">Google Scholar</a>.
+    </p>
+
+
+    <!-- Research area 1 -->
+    <div class="project">
+      <h2>How organizations navigate competing values</h2>
+      <p>
+        I have a long-standing interest in how organizations and individuals
+        navigate competing goals and values, and the constraints that shape
+        their efforts to do so. This line of research began during my time in
+        the NIH Department of Bioethics, where I studied how competing ethical
+        values should be balanced in genetic testing and pediatric research.
+        My current work extends these questions to examine how value conflicts
+        are socially produced and how organizational and regulatory
+        arrangements shape efforts to reconcile them. Leveraging the
+        high-stakes case of organ donation, I examine how organ procurement
+        organizations (OPOs) and hospitals navigate tensions between
+        facilitating donation and providing trustworthy and culturally
+        resonant end-of-life care, and how recent regulatory reforms designed
+        to increase the supply of organs for transplantation have heightened
+        these tensions.
+      </p>
+    </div>
+
+
+    <!-- Research area 2 -->
+    <div class="project">
+      <h2>Access and inequality</h2>
+      <p>
+        A second line of my research examines how organizational and
+        regulatory arrangements shape access to healthcare. I am particularly
+        interested in how systems designed to promote equitable access can
+        nonetheless produce unequal outcomes. My current work examines this
+        problem in organ transplantation, including why OPOs increasingly
+        allocate organs “out of sequence,” bypassing some potential
+        recipients at the top of the allocation list.
+      </p>
+    </div>
+
+
+    <!-- Research area 3 -->
+    <div class="project">
+      <h2>Expertise and clinical practice</h2>
+      <p>
+        A third line of my research examines the social foundations of
+        expertise. I have studied the barriers clinical ethicists face in
+        establishing professional authority, how cardiologists incorporate
+        new forms of genetic evidence into clinical decision-making, and how
+        clinical practices spread among physicians through professional peer
+        networks. All three studies appear in
+        <em>Social Science &amp; Medicine</em>. My future research will
+        examine how artificial intelligence is reshaping clinical judgment,
+        hospital routines, and professional accountability.
+      </p>
+    </div>
+
+  </div>
+
 </div>
-<script data-goatcounter="https://willschupmann.goatcounter.com/count"
-        async src="https://gc.zgo.at/count.js"></script>
+
+<!-- Visitor statistics (GoatCounter). Leave this as is. -->
+<script data-goatcounter="https://willschupmann.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
